@@ -6,6 +6,20 @@ using System.Threading.Tasks;
 using System.IO;
 using static System.Console;
 
+/*
+ * Developers: Sara Jade, Jose Cheyo Jimenez, Tyler Walser
+ * 9/1/17
+ * 
+ * class Concordance has been updated with the following features:
+ * 1) using static System.Console;
+ * 2) exceptions thrown appropriate for WPF project
+ * 3) WPF display based on files of output text from previous lab
+ * 
+ * TODO: Update code to display to WPF window based on analyzed input file.
+ * 
+ */
+
+
 namespace TLG
 {
     public class Concordance
