@@ -19,8 +19,6 @@ namespace TLG
         {
             Analyzer anlz = new Analyzer();
             
-            //Properties["Analyzer"] = anlz;
-
             // Set up paths from args
             if (e.Args.Length != 3)
             {
@@ -35,6 +33,7 @@ namespace TLG
 
             // Move next line to bottom so that anlz has the properties
             // given by the program.
+            // This way, Properties["Analyzer"] has updated anlz
             Properties["Analyzer"] = anlz;
         }
     }
