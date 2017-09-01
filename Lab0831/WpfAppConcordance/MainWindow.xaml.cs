@@ -26,12 +26,9 @@ namespace TLG
         {
             analyzer = (TLG.Analyzer)Application.Current.Properties["Analyzer"];
             InitializeComponent();
-        }
-
-        private void WordCountsAlphabetical_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
             List<string> content = new List<string>();
             content.Add(Concordance.inputText);
+            Input_Text.Text = Concordance.inputText;
         }
     }
 }
