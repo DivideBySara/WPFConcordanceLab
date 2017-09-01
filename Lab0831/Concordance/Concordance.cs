@@ -8,14 +8,14 @@ using static System.Console;
 
 namespace TLG
 {
-    class Concordance
+    public class Concordance
     {
-        static string inPath = string.Empty;
-        static string outPath = string.Empty;
-        static string excludedWordsPath = string.Empty;
-        static string inputText = string.Empty;
-        static string outputText = string.Empty;
-        static string[] excludedWords;
+        public static string inPath = string.Empty;
+        public static string outPath = string.Empty;
+        public static string excludedWordsPath = string.Empty;
+        public static string inputText = string.Empty;
+        public static string outputText = string.Empty;
+        public static string[] excludedWords;
 
         static void Main(string[] args)
         {
@@ -38,7 +38,7 @@ namespace TLG
             ReadKey();
         }
 
-        static void ReadInputs()
+        public static void ReadInputs()
         {
             try
             {
@@ -51,7 +51,7 @@ namespace TLG
             }
         }
 
-        static void GetPaths(string[] args)
+        public static void GetPaths(string[] args)
         {
             // Get the path to the input text file
             try
