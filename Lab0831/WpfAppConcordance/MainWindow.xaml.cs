@@ -50,5 +50,10 @@ namespace TLG
         {
             Input_Text.Text = File.ReadAllText(Concordance.outputFilePaths[3]);
         }
+
+        private void Window_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            //MainWindow.HeightProperty.PropertyType.Attributes. 
+        }
     }
 }
