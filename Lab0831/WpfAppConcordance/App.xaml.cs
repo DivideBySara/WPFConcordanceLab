@@ -18,6 +18,8 @@ namespace TLG
         private void Application_Startup(object sender, StartupEventArgs e)
         {
             Analyzer anlz = new Analyzer();
+            
+            //Properties["Analyzer"] = anlz;
 
             // Set up paths from args
             if (e.Args.Length != 3)
@@ -30,6 +32,10 @@ namespace TLG
             // Identify paragraphs and sentences
             // Identify words and their location
             anlz.Analyze(Concordance.inputText);
+
+            // Move next line to bottom so that anlz has the properties
+            // given by the program.
+            Properties["Analyzer"] = anlz;
         }
     }
 }

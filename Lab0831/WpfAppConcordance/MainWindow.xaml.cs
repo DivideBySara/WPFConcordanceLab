@@ -20,8 +20,11 @@ namespace TLG
     /// </summary>
     public partial class MainWindow : Window
     {
+        internal TLG.Analyzer analyzer;
+
         public MainWindow()
         {
+            analyzer = (TLG.Analyzer)Application.Current.Properties["Analyzer"];
             InitializeComponent();
         }
     }
