@@ -50,6 +50,9 @@ namespace TLG
             // Identify words and their location
             anlz.Analyze(inputText);
 
+            // TODO: fix this method!
+            StartConcordance(anlz.Paragraphs, excludedWords);
+
             ReadKey();
         }
 
