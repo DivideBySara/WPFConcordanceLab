@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="352.414" Width="395.46" SizeChanged="Window_SizeChanged">
     <Grid>
-        <TextBox x:Name="Input_Text" HorizontalAlignment="Left" Height="299" Margin="10,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="253" RenderTransformOrigin="0.5,0.5">
+        <TextBox x:Name="Input_Text" HorizontalAlignment="Left" Height="299" Margin="10,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="253" RenderTransformOrigin="0.5,0.5" TextChanged="Input_Text_TextChanged">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>

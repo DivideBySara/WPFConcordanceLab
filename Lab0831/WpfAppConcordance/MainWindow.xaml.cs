@@ -17,19 +17,8 @@ using System.IO;
 namespace TLG
 {
     /// <summary>
-    /// Developers: Sara Jade, Tyler Walser, Jose Cheyo Jimenez
-    /// 9/1/17
-    /// 
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    /// <remarks>
-    /// MainWindow currently displays output in a textbox.
-    /// The textbox output comes from output files rather than an
-    /// input text file that has been analyzed.
-    /// 
-    /// TODO: Display code on MainWindow that has been programmatically created
-    /// by project Concordance. Probably use a listview.
-    /// </remarks>
     public partial class MainWindow : Window
     {
         internal TLG.Analyzer analyzer;
@@ -65,6 +54,11 @@ namespace TLG
         private void Window_SizeChanged(object sender, SizeChangedEventArgs e)
         {
             //MainWindow.HeightProperty.PropertyType.Attributes. 
+        }
+
+        private void Input_Text_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

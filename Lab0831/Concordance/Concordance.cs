@@ -56,6 +56,37 @@ namespace TLG
             ReadKey();
         }
 
+        //TODO: fix this method!
+        private static void StartConcordance
+            (List<Paragraph> paragraphs, string[] excludedWords)
+        {
+            List<Wordref> wordrefList = GetWordrefList(paragraphs, excludedWords);
+            // display wordrefList 's words to MainWindow
+        }
+
+        private static List<Wordref> GetWordrefList
+            (List<Paragraph> paragraphs, string[] excludedWords)
+        {
+            List<Wordref> wordrefList = new List<Wordref>();
+
+            foreach (Paragraph paragraph in paragraphs)
+            {
+                foreach (Sentence sentence in paragraph.sentences)
+                {
+                    foreach (Wordref wordref in sentence.words)
+                    {
+                        if (!excludedWords.Contains(wordref.word)
+                            && wordref.word != string.Empty)
+                        {
+                            wordrefList.Add(wordref);
+                        } // else don't add the wordref        
+                    }
+                }
+            }
+
+            return wordrefList;
+        }
+
         public static void ReadInputs()
         {
             // No need for try-catch block because program already throws

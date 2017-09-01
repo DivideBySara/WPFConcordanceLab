@@ -36,7 +36,7 @@ namespace TLG
         List<Paragraph> paragraphs = new List<Paragraph>();
 
         // Property getter
-        List<Paragraph> Paragraphs
+        internal List<Paragraph> Paragraphs
         {
             get { return paragraphs; }
         }
