@@ -5,12 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TLG"
         mc:Ignorable="d"
-        Title="MainWindow" Height="352.414" Width="395.46">
+        Title="MainWindow" Height="352.414" Width="395.46" SizeChanged="Window_SizeChanged">
     <Grid>
-        <TextBox x:Name="Input_Text" HorizontalAlignment="Left" Height="299" Margin="10,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="253"/>
-        <Button x:Name="WordCount" Content="Word Count" HorizontalAlignment="Left" Margin="278,10,0,0" VerticalAlignment="Top" Width="99" AutomationProperties.Name="WordCounts" Click="WordCount_Click"/>
-        <Button x:Name="WordCount2" Content="Word Count 2" HorizontalAlignment="Left" Margin="278,35,0,0" VerticalAlignment="Top" Width="99" Click="WordCount2_Click"/>
-        <Button x:Name="WordLocation" Content="Word Location" HorizontalAlignment="Left" Margin="278,60,0,0" VerticalAlignment="Top" Width="99" Click="WordLocation_Click"/>
+        <TextBox x:Name="Input_Text" HorizontalAlignment="Left" Height="299" Margin="10,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="253" RenderTransformOrigin="0.5,0.5">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <Button x:Name="WordCount" Content="Word Count" HorizontalAlignment="Left" Margin="278,10,0,0" VerticalAlignment="Top" Width="99" AutomationProperties.Name="WordCounts" Click="WordCount_Click" BorderThickness="2" Background="#FF0D56F1" Foreground="White" BorderBrush="#FF0D56F1"/>
+        <Button x:Name="WordCount2" Content="Word Count 2" HorizontalAlignment="Left" Margin="278,35,0,0" VerticalAlignment="Top" Width="99" Click="WordCount2_Click" Background="#FF0EB049" BorderBrush="#FF0E4CAD" Foreground="White"/>
+        <Button x:Name="WordLocation" Content="Word Location" HorizontalAlignment="Left" Margin="278,60,0,0" VerticalAlignment="Top" Width="99" Click="WordLocation_Click" Background="#FF42046C" BorderBrush="#FF42046C" Foreground="White"/>
         <Button x:Name="WordLocation2" Content="Word Location 2" HorizontalAlignment="Left" Margin="278,85,0,0" VerticalAlignment="Top" Width="99" Click="WordLocation2_Click"/>
     </Grid>
 </Window>
