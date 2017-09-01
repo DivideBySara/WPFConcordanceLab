@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WpfAppConcordance.Properties
+namespace TLG.Properties
 {
 
 

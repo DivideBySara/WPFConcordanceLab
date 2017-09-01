@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 using System.IO;
 using static System.Console;
 
-namespace Lab0830
+namespace TLG
 {
-    class Concordance
+    public class Concordance
     {
-        static string inPath = string.Empty;
-        static string outPath = string.Empty;
-        static string excludedWordsPath = string.Empty;
-        static string inputText = string.Empty;
-        static string outputText = string.Empty;
-        static string[] excludedWords;
+        public static string inPath = string.Empty;
+        public static string outPath = string.Empty;
+        public static string excludedWordsPath = string.Empty;
+        public static string inputText = string.Empty;
+        public static string outputText = string.Empty;
+        public static string[] excludedWords;
 
         static void Main(string[] args)
         {
@@ -38,20 +38,15 @@ namespace Lab0830
             ReadKey();
         }
 
-        static void ReadInputs()
+        public static void ReadInputs()
         {
-            try
-            {
-                inputText = File.ReadAllText(inPath);
-                excludedWords = File.ReadAllLines(excludedWordsPath);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Error reading file " + e.Message);
-            }
+            // No need for try-catch block because program already throws
+            // appropriate exception when it can't find a file.
+            inputText = File.ReadAllText(inPath);
+            excludedWords = File.ReadAllLines(excludedWordsPath);
         }
 
-        static void GetPaths(string[] args)
+        public static void GetPaths(string[] args)
         {
             // Get the path to the input text file
             try
@@ -60,7 +55,7 @@ namespace Lab0830
             }
             catch (ArgumentException)
             {
-                Console.WriteLine($"Invalid text input path {args[0]}");
+                throw new ArgumentException($"Invalid text input path {args[0]}");
             }
 
             // Get the path for the output file
@@ -70,7 +65,7 @@ namespace Lab0830
             }
             catch (ArgumentException)
             {
-                Console.WriteLine($"Invalid text output path {args[1]}");
+                throw new ArgumentException($"Invalid text output path {args[1]}");
             }
 
             // Get the path to the excluded words file
@@ -80,7 +75,7 @@ namespace Lab0830
             }
             catch (ArgumentException)
             {
-                Console.WriteLine($"Invalid excluded words input path {args[1]}");
+                throw new ArgumentException($"Invalid excluded words input path {args[1]}");
             }
         }
 
