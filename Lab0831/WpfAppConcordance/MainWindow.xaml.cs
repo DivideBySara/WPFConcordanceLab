@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
 
 namespace TLG
 {
@@ -32,22 +33,22 @@ namespace TLG
 
         private void WordCount_Click(object sender, RoutedEventArgs e)
         {
-            Input_Text.Text = "Test1";
+            Input_Text.Text = File.ReadAllText(Concordance.outputFilePaths[0]);
         }
 
         private void WordCount2_Click(object sender, RoutedEventArgs e)
         {
-            Input_Text.Text = "Test2";
+            Input_Text.Text = File.ReadAllText(Concordance.outputFilePaths[2]);
         }
 
         private void WordLocation_Click(object sender, RoutedEventArgs e)
         {
-            Input_Text.Text = "Test3";
+            Input_Text.Text = File.ReadAllText(Concordance.outputFilePaths[1]);
         }
 
         private void WordLocation2_Click(object sender, RoutedEventArgs e)
         {
-            Input_Text.Text = "Test4";
+            Input_Text.Text = File.ReadAllText(Concordance.outputFilePaths[3]);
         }
     }
 }
