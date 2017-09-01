@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Text;
 using System.IO;
-using static System.Console;
 
 namespace TLG
 {
@@ -23,8 +22,7 @@ namespace TLG
             // Set up paths from args
             if (e.Args.Length != 3)
             {
-                Console.WriteLine("Invalid number of path specifications");
-                return;
+                throw new ArgumentException("Invalid number of path specifications");
             }
             Concordance.GetPaths(e.Args);
             // Get the input data
@@ -32,8 +30,6 @@ namespace TLG
             // Identify paragraphs and sentences
             // Identify words and their location
             anlz.Analyze(Concordance.inputText);
-
-            ReadKey();
         }
     }
 }

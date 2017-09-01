@@ -40,15 +40,10 @@ namespace TLG
 
         public static void ReadInputs()
         {
-            try
-            {
-                inputText = File.ReadAllText(inPath);
-                excludedWords = File.ReadAllLines(excludedWordsPath);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Error reading file " + e.Message);
-            }
+            // No need for try-catch block because program already throws
+            // appropriate exception when it can't find a file.
+            inputText = File.ReadAllText(inPath);
+            excludedWords = File.ReadAllLines(excludedWordsPath);
         }
 
         public static void GetPaths(string[] args)
@@ -60,7 +55,7 @@ namespace TLG
             }
             catch (ArgumentException)
             {
-                Console.WriteLine($"Invalid text input path {args[0]}");
+                throw new ArgumentException($"Invalid text input path {args[0]}");
             }
 
             // Get the path for the output file
@@ -70,7 +65,7 @@ namespace TLG
             }
             catch (ArgumentException)
             {
-                Console.WriteLine($"Invalid text output path {args[1]}");
+                throw new ArgumentException($"Invalid text output path {args[1]}");
             }
 
             // Get the path to the excluded words file
@@ -80,7 +75,7 @@ namespace TLG
             }
             catch (ArgumentException)
             {
-                Console.WriteLine($"Invalid excluded words input path {args[1]}");
+                throw new ArgumentException($"Invalid excluded words input path {args[1]}");
             }
         }
 
