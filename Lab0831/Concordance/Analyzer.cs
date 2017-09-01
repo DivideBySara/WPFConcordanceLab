@@ -1,7 +1,7 @@
 ﻿using System.Text.RegularExpressions;
 using System.Collections.Generic;
 
-namespace Lab0830
+namespace TLG
 {
     internal struct Wordref
     {

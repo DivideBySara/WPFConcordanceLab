@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.IO;
 using static System.Console;
 
-namespace Lab0830
+namespace TLG
 {
     class Concordance
     {
