@@ -1,6 +1,14 @@
 ﻿using System.Text.RegularExpressions;
 using System.Collections.Generic;
 
+/*
+ * Sara Jade
+ * 9/1/17
+ * 
+ * Analyzer.cs has been modified in the following way(s):
+ * 1) a Property for paragraphs has been added.
+ */ 
+
 namespace TLG
 {
     internal struct Wordref
@@ -26,6 +34,12 @@ namespace TLG
     public class Analyzer
     {
         List<Paragraph> paragraphs = new List<Paragraph>();
+
+        // Property getter
+        internal List<Paragraph> Paragraphs
+        {
+            get { return paragraphs; }
+        }
 
         public void Analyze(string input)
         {

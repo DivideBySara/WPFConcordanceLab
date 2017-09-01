@@ -6,6 +6,20 @@ using System.Threading.Tasks;
 using System.IO;
 using static System.Console;
 
+/*
+ * Developers: Sara Jade, Jose Cheyo Jimenez, Tyler Walser
+ * 9/1/17
+ * 
+ * class Concordance has been updated with the following features:
+ * 1) using static System.Console;
+ * 2) exceptions thrown appropriate for WPF project
+ * 3) WPF display based on files of output text from previous lab
+ * 
+ * TODO: Update code to display to WPF window based on analyzed input file.
+ * 
+ */
+
+
 namespace TLG
 {
     public class Concordance
@@ -36,7 +50,41 @@ namespace TLG
             // Identify words and their location
             anlz.Analyze(inputText);
 
+            // TODO: fix this method!
+            StartConcordance(anlz.Paragraphs, excludedWords);
+
             ReadKey();
+        }
+
+        //TODO: fix this method!
+        private static void StartConcordance
+            (List<Paragraph> paragraphs, string[] excludedWords)
+        {
+            List<Wordref> wordrefList = GetWordrefList(paragraphs, excludedWords);
+            // display wordrefList 's words to MainWindow
+        }
+
+        private static List<Wordref> GetWordrefList
+            (List<Paragraph> paragraphs, string[] excludedWords)
+        {
+            List<Wordref> wordrefList = new List<Wordref>();
+
+            foreach (Paragraph paragraph in paragraphs)
+            {
+                foreach (Sentence sentence in paragraph.sentences)
+                {
+                    foreach (Wordref wordref in sentence.words)
+                    {
+                        if (!excludedWords.Contains(wordref.word)
+                            && wordref.word != string.Empty)
+                        {
+                            wordrefList.Add(wordref);
+                        } // else don't add the wordref        
+                    }
+                }
+            }
+
+            return wordrefList;
         }
 
         public static void ReadInputs()

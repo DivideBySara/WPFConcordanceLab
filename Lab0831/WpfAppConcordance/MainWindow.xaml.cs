@@ -55,5 +55,10 @@ namespace TLG
         {
             //MainWindow.HeightProperty.PropertyType.Attributes. 
         }
+
+        private void Input_Text_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
