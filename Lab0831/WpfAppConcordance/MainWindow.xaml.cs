@@ -26,9 +26,28 @@ namespace TLG
         {
             analyzer = (TLG.Analyzer)Application.Current.Properties["Analyzer"];
             InitializeComponent();
-            List<string> content = new List<string>();
-            content.Add(Concordance.inputText);
+           
             Input_Text.Text = Concordance.inputText;
+        }
+
+        private void WordCount_Click(object sender, RoutedEventArgs e)
+        {
+            Input_Text.Text = "Test1";
+        }
+
+        private void WordCount2_Click(object sender, RoutedEventArgs e)
+        {
+            Input_Text.Text = "Test2";
+        }
+
+        private void WordLocation_Click(object sender, RoutedEventArgs e)
+        {
+            Input_Text.Text = "Test3";
+        }
+
+        private void WordLocation2_Click(object sender, RoutedEventArgs e)
+        {
+            Input_Text.Text = "Test4";
         }
     }
 }
