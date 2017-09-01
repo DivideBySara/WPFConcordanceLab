@@ -5,8 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TLG"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="352.414" Width="395.46">
     <Grid>
-        
+        <TextBox x:Name="Input_Text" HorizontalAlignment="Left" Height="299" Margin="10,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="253"/>
+        <Button x:Name="WordCount" Content="Word Count" HorizontalAlignment="Left" Margin="278,10,0,0" VerticalAlignment="Top" Width="99" AutomationProperties.Name="WordCounts" Click="WordCount_Click"/>
+        <Button x:Name="WordCount2" Content="Word Count 2" HorizontalAlignment="Left" Margin="278,35,0,0" VerticalAlignment="Top" Width="99" Click="WordCount2_Click"/>
+        <Button x:Name="WordLocation" Content="Word Location" HorizontalAlignment="Left" Margin="278,60,0,0" VerticalAlignment="Top" Width="99" Click="WordLocation_Click"/>
+        <Button x:Name="WordLocation2" Content="Word Location 2" HorizontalAlignment="Left" Margin="278,85,0,0" VerticalAlignment="Top" Width="99" Click="WordLocation2_Click"/>
     </Grid>
 </Window>

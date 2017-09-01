@@ -16,6 +16,7 @@ namespace TLG
         public static string inputText = string.Empty;
         public static string outputText = string.Empty;
         public static string[] excludedWords;
+        public static string[] outputFilePaths = new string[4];
 
         static void Main(string[] args)
         {
@@ -44,6 +45,8 @@ namespace TLG
             // appropriate exception when it can't find a file.
             inputText = File.ReadAllText(inPath);
             excludedWords = File.ReadAllLines(excludedWordsPath);
+
+            
         }
 
         public static void GetPaths(string[] args)
@@ -77,6 +80,11 @@ namespace TLG
             {
                 throw new ArgumentException($"Invalid excluded words input path {args[1]}");
             }
+
+            outputFilePaths[0] = Path.Combine(outPath, "0.txt");
+            outputFilePaths[1] = Path.Combine(outPath, "1.txt");
+            outputFilePaths[2] = Path.Combine(outPath, "2.txt");
+            outputFilePaths[3] = Path.Combine(outPath, "3.txt");
         }
 
     }
